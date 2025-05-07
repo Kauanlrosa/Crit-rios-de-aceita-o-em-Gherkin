@@ -22,10 +22,10 @@ E a senha "?"
 Então o sistema deve exibir uma mensagem de alerta "Campo (senha) vazio"
 
 Esquema do Cenário: Conclusão de cadastro inválida
-Quando não digitar os campos com  <*> obrigatórios, com o <usuario> em formato inválido e campos <vazios>
-Então o resultado deve ser exibir <mensagem> de erro
+Quando deixar em branco ou inserir informações incorretas nos campos <usuario>, <idade> e <senha>
+Então o o sistema deve exibir uma <mensagem> de erro
 
 Exemplos:
-|usuario|*idade*|senha|
-|"kauan._!33574@ebac.br"|"*idade*"|"?"|"Houve um erro ao cadastrar o usuário obs: formato de email inválido, "*idade*" obrigatórios e campo (senha) vazio"
-|"jorge.br*@ebac.com.br"|"*idade*"|"?"|"Houve um erro ao cadastrar o usuário obs: formato de email inválido, "*idade*" obrigatórios e campo (senha) vazio"
+|usuario|idade|senha|mensagem|
+|"kauan._!33574@ebac.br"|"<idade>"|"<senha>"|"Houve um erro ao cadastrar o usuário obs: formato de email inválido, "<idade>" obrigatórios e campo <senha> vazio"
+|"jorge.br*@ebac.com.br"|"23"|"<senha>"|"Houve um erro ao cadastrar o usuário obs: formato de email inválido e campo <senha> vazio"
